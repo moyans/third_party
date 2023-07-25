@@ -93,7 +93,7 @@ if (WIN32)
 endif()
 ExternalProject_Add(curl
   PREFIX curl
-  GIT_REPOSITORY "https://github.com/curl/curl.git"
+  GIT_REPOSITORY "git@github.com:curl/curl.git"
   GIT_TAG "curl-7_86_0"
   SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/curl/src/curl"
   EXCLUDE_FROM_ALL ON
@@ -113,7 +113,7 @@ ExternalProject_Add(curl
 )
 ExternalProject_Add(grpc-repo
   PREFIX grpc-repo
-  GIT_REPOSITORY "https://github.com/grpc/grpc.git"
+  GIT_REPOSITORY "git@github.com:grpc/grpc.git"
   GIT_TAG "v1.48.0"
   SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/grpc-repo/src/grpc"
   EXCLUDE_FROM_ALL ON
@@ -128,7 +128,7 @@ ExternalProject_Add(grpc-repo
 #
 ExternalProject_Add(nlohmann-json
   PREFIX nlohmann-json
-  GIT_REPOSITORY "https://github.com/nlohmann/json.git"
+  GIT_REPOSITORY "git@github.com:nlohmann/json.git"
   GIT_TAG "v3.10.5"
   SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/json"
   EXCLUDE_FROM_ALL ON
@@ -268,7 +268,7 @@ ExternalProject_Add(grpc
 #
 ExternalProject_Add(libevent
   PREFIX libevent
-  GIT_REPOSITORY "https://github.com/libevent/libevent.git"
+  GIT_REPOSITORY "git@github.com:libevent/libevent.git"
   GIT_TAG "release-2.1.8-stable"
   SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/libevent/src/libevent"
   EXCLUDE_FROM_ALL ON
@@ -331,7 +331,7 @@ endif()
 #
 ExternalProject_Add(prometheus-cpp
   PREFIX prometheus-cpp
-  GIT_REPOSITORY "https://github.com/jupp0r/prometheus-cpp.git"
+  GIT_REPOSITORY "git@github.com:jupp0r/prometheus-cpp.git"
   GIT_TAG "v1.0.1"
   SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/prometheus-cpp/src/prometheus-cpp"
   EXCLUDE_FROM_ALL ON
@@ -351,11 +351,11 @@ ExternalProject_Add(prometheus-cpp
 # Build crc32c
 #
 # Use a specific hash to get ARM64 fix not included in latest release
-# (https://github.com/google/crc32c/pull/52).
+# (git@github.com:google/crc32c/pull/52).
 #
 ExternalProject_Add(crc32c
   PREFIX crc32c
-  GIT_REPOSITORY "https://github.com/google/crc32c.git"
+  GIT_REPOSITORY "git@github.com:google/crc32c.git"
   GIT_TAG "b9d6e825a1e6783195a6051639179152dac70b3b"
   SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/crc32c/src/crc32c"
   EXCLUDE_FROM_ALL ON
@@ -389,7 +389,7 @@ set(GCS_CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH}
 #
 ExternalProject_Add(google-cloud-cpp
   PREFIX google-cloud-cpp
-  GIT_REPOSITORY "https://github.com/googleapis/google-cloud-cpp.git"
+  GIT_REPOSITORY "git@github.com:googleapis/google-cloud-cpp.git"
   GIT_TAG "v1.42.0"
   SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/google-cloud-cpp/src/google-cloud-cpp"
   EXCLUDE_FROM_ALL ON
@@ -412,7 +412,7 @@ ExternalProject_Add(google-cloud-cpp
 #
 ExternalProject_Add(azure-sdk
   PREFIX azure-sdk
-  GIT_REPOSITORY "https://github.com/Azure/azure-sdk-for-cpp.git"
+  GIT_REPOSITORY "git@github.com:Azure/azure-sdk-for-cpp.git"
   GIT_TAG "azure-storage-blobs_12.7.0"
   SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/azure-sdk/src/azure-sdk-for-cpp"
   EXCLUDE_FROM_ALL ON
@@ -450,7 +450,7 @@ ExternalProject_Add(cnmem
 #
 ExternalProject_Add(aws-sdk-cpp
   PREFIX aws-sdk-cpp
-  GIT_REPOSITORY "https://github.com/aws/aws-sdk-cpp.git"
+  GIT_REPOSITORY "git@github.com:aws/aws-sdk-cpp.git"
   GIT_TAG "1.11.60"
   SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/aws-sdk-cpp/src/aws-sdk-cpp"
   EXCLUDE_FROM_ALL ON
@@ -477,7 +477,7 @@ if (NOT WIN32)
   set(PROTO_LIB_PATH "${TRITON_THIRD_PARTY_INSTALL_PREFIX}/protobuf/${LIB_DIR}/libprotobuf.a")
   ExternalProject_Add(opentelemetry-cpp
     PREFIX opentelemetry-cpp
-    GIT_REPOSITORY "https://github.com/open-telemetry/opentelemetry-cpp.git"
+    GIT_REPOSITORY "git@github.com:open-telemetry/opentelemetry-cpp.git"
     GIT_TAG "v1.8.3"
     SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/opentelemetry-cpp/src/opentelemetry-cpp"
     EXCLUDE_FROM_ALL ON
